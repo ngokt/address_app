@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <input type="text" name="user[name]" id="user_name" required>
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_field :address %>
+    <input type="text" name="user[address]" id="user_address" maxlength="30" required>
   </div>
 
   <div class="field">
     <%= form.label :age %>
-    <%= form.number_field :age %>
+    <input type="number" name="user[age]" id="user_age" min="0" max="130">
   </div>
 
   <div class="actions">
