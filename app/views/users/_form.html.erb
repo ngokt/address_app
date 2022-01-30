@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :名前 %>
     <input type="text" name="user[name]" id="user_name" required>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
+    <%= form.label :住所 %>
     <input type="text" name="user[address]" id="user_address" maxlength="30" required>
   </div>
 
   <div class="field">
-    <%= form.label :age %>
+    <%= form.label :年齢 %>
     <input type="number" name="user[age]" id="user_age" min="0" max="130">
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+  <input type="submit" name="commit" value="登録" data-disable-with="Create User">
   </div>
 <% end %>
