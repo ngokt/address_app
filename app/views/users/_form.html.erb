@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :名前 %>
-    <input type="text" name="user[name]" id="user_name" required>
+    <%= form.text_field :name %>
   </div>
 
   <div class="field">
     <%= form.label :住所 %>
-    <input type="text" name="user[address]" id="user_address" maxlength="30" required>
+    <%= form.text_field :address %>
   </div>
 
   <div class="field">
     <%= form.label :年齢 %>
-    <input type="number" name="user[age]" id="user_age" min="0" max="130">
+    <%= form.number_field :age, in:0..130, :required => true %>
   </div>
 
   <div class="actions">
