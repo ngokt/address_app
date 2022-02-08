@@ -20,7 +20,6 @@ const ageCalculation = ( birthDate , nowDate ) => {
     return Math.floor( (nowNumber - birthNumber) / 10000 );
 }
  
-const ageage = ageCalculation( new Date(birthdate) , new Date() );
-document.getElementById('edit_area').innerHTML = ageage ;
+ageage = ageCalculation( new Date(birthdate) , new Date() );
 
 console.log( ageage + "歳" );

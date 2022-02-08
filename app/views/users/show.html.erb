@@ -9,13 +9,21 @@
   <strong>住所:</strong>
   <%= @user.address %>
 </p>
-
+<div class="bbb">
 <p>
+
   <strong>年齢:</strong>
+  <div id="age_area"></div>
+  
   <input type="hidden" id="aaa" value="<%= @user.age %>">
   <%= javascript_pack_tag 'new' %>
-  <div id="edit_area"></div>
+  
+  <script>
+    document.getElementById('age_area').innerHTML = ageage + "歳" ;
+  </script>
+  
+  
 </p>
-
+</div>
 <%= link_to '編集', edit_user_path(@user) %> |
 <%= link_to '戻る', users_path %>
