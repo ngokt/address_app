@@ -12,16 +12,30 @@
   </thead>
   
   <tbody>
-    <% @users.each do |user| %>
+    <% @users.each_with_index do |user, idx| %>
       <tr>
         <td><%= user.name %></td>
         <td><%= user.address %></td>
-        <td id="a_area"></td>
-        <input type="hidden" id="aaa" value="<%= user.age %>">
-        <%= javascript_pack_tag 'new' %>
+        <td id="user_age<%= idx %>"></td>
         
         <script>
-          document.getElementById('a_area').innerHTML = ageage + "歳" ;
+          var dateStr = "<%== JSON.dump(user.age) %>";
+         
+          var birthdate = new Date(dateStr.substr(0, 4), dateStr.substr(4, 2)-1, dateStr.substr(6, 2))
+ 
+          var ageCalculation = ( birthDate , nowDate ) => {
+            var birthNumber = birthDate.getFullYear() * 10000 
+                                      + (birthDate.getMonth() + 1 ) * 100 
+                                      + birthDate.getDate();
+            var nowNumber = nowDate.getFullYear() * 10000 
+                                      + (nowDate.getMonth() + 1 ) * 100 
+                                      + nowDate.getDate();
+        
+            return Math.floor( (nowNumber - birthNumber) / 10000 );
+          }
+ 
+          age = ageCalculation( new Date(birthdate) , new Date() );
+          document.getElementById("user_age<%= idx %>").innerHTML = age + "歳" ;
         </script>
         <td><%= link_to '詳細', user %></td>
         <td><%= link_to '編集', edit_user_path(user) %></td>

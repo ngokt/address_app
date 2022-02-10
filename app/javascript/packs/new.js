@@ -22,4 +22,3 @@ const ageCalculation = ( birthDate , nowDate ) => {
  
 ageage = ageCalculation( new Date(birthdate) , new Date() );
 
-console.log( ageage + "歳" );
