@@ -17,6 +17,9 @@
   </div>
 
   <div class="field">
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <%= form.label :郵便番号 %>
+    <input type="text" name="zip" onKeyUp="AjaxZip3.zip2addr('zip', '', 'user[address]', 'user[address]');" >
     <%= form.label :住所 %>
     <%= form.text_field :address %>
   </div>
