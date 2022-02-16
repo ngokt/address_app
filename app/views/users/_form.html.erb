@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :名前 %>
+    <%= form.label t('new.name') %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
-    <%= form.label :郵便番号 %>
+    <%= form.label t('new.post_code') %>
     <input type="text" name="zip" onKeyUp="AjaxZip3.zip2addr('zip', '', 'user[address]', 'user[address]');" >
-    <%= form.label :住所 %>
+    <%= form.label t('new.address') %>
     <%= form.text_field :address %>
   </div>
 
   <div class="field">
-    <%= form.label :生年月日（例：1995年1月1日→19950101） %>
+    <%= form.label t('new.birth') %>
     <%= form.number_field :age %>
   </div>
 
   <div class="actions">
-  <input type="submit" name="commit" value="登録" data-disable-with="Create User">
+  <input type="submit" name="commit" value=<%= t('register') %> data-disable-with="Create User">
   </div>
 <% end %>

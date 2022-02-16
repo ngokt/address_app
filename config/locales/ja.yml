@@ -1,0 +1,12 @@
+ja:
+  new:
+    name: 名前
+    post_code: 郵便番号
+    address: 住所
+    birth: 生年月日（例：1995年1月1日→19950101）
+  register: 登録
+  edit:
+    title: 登録情報変更
+    detail: 詳細
+    return: 戻る
+  
