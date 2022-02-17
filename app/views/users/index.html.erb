@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div class="address">アドレス帳</div>
+<div class="address"><%= t('index.title') %></div>
 <table>
   <thead>
     <tr>
-      <th>名前</th>
-      <th>住所</th>
-      <th>年齢</th>
+      <th><%= t('new.name') %></th>
+      <th><%= t('new.address') %></th>
+      <th><%= t('index.age') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -35,11 +35,11 @@
           }
  
           age = ageCalculation( new Date(birthdate) , new Date() );
-          document.getElementById("user_age<%= idx %>").innerHTML = age + "歳" ;
+          document.getElementById("user_age<%= idx %>").innerHTML = age + "<%= t('index.sai') %>" ;
         </script>
-        <td><%= link_to '詳細', user %></td>
-        <td><%= link_to '編集', edit_user_path(user) %></td>
-        <td><%= link_to '削除', user, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+        <td><%= link_to t('edit.detail'), user %></td>
+        <td><%= link_to t('edit.edit'), edit_user_path(user) %></td>
+        <td><%= link_to t('edit.delete'), user, method: :delete, data: { confirm: t('edit.alert') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -47,4 +47,4 @@
 
 <br>
 
-<%= link_to '新規登録', new_user_path %>
+<%= link_to t('index.new'), new_user_path %>

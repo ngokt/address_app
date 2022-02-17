@@ -8,5 +8,15 @@ ja:
   edit:
     title: 登録情報変更
     detail: 詳細
+    edit: 編集
+    delete: 削除
     return: 戻る
+    alert: 本当に削除しますか?
+  index:
+    title: アドレス帳
+    age: 年齢
+    sai: 歳
+    new: 新規登録
+  
+
   

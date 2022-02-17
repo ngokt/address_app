@@ -1,5 +1,5 @@
-<div class="address">新規登録</div>
+<div class="address"><%= t('index.new') %></div>
 
 <%= render 'form', user: @user %>
 
-<%= link_to '戻る', users_path %>
+<%= link_to t('edit.return'), users_path %>
