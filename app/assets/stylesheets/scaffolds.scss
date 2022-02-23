@@ -125,3 +125,48 @@ label {
 .btn_01:hover:before {
   border-color: transparent transparent transparent #fff;
 }
+
+.custom-btn {
+  padding: 10px 25px;
+  border: 2px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.btn-02 {
+  position: relative;
+  color: #000;
+  z-index: 2;
+  padding: 0;
+}
+.btn-02:hover{
+  border: none;
+}
+.btn-02:before,
+.btn-02:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 2px solid transparent;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.btn-02:before {
+  top: 0;
+   left: 0;
+}
+.btn-02:after{
+   bottom: 0;
+   right: 0;
+}
+.btn-02:hover:before,
+.btn-02:hover:after {
+  border-color: #000;
+  height: 100%;
+  width: 100%;
+}
