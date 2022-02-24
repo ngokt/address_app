@@ -37,7 +37,7 @@
           age = ageCalculation( new Date(birthdate) , new Date() );
           document.getElementById("user_age<%= idx %>").innerHTML = age + "<%= t('index.sai') %>" ;
         </script>
-        <td><%= link_to t('edit.detail'), user, class: "custom-btn btn-02" %></td>
+        <td><%= link_to t('edit.detail'), user, class: "custom-btn btn-02", data: {"turbolinks" => false} %></td>
         <td><%= link_to t('edit.edit'), edit_user_path(user), class: "custom-btn btn-02" %></td>
         <td><%= link_to t('edit.delete'), user, method: :delete, data: { confirm: t('edit.alert') }, class: "custom-btn btn-02" %></td>
       </tr>
@@ -47,4 +47,4 @@
 
 <br>
 
-<%= link_to t('index.new'), new_user_path %>
+<%= link_to t('index.new'), new_user_path, class: "btn-03" %>
